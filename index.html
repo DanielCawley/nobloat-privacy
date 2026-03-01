@@ -92,15 +92,12 @@
             font-size: 1.1rem;
             margin-bottom: 12px;
         }
-        .policy-block p {
+        .policy-block p, .policy-block ul {
             color: #555;
             line-height: 1.7;
             font-size: 0.95rem;
         }
         .policy-block ul {
-            color: #555;
-            line-height: 1.7;
-            font-size: 0.95rem;
             padding-left: 20px;
             margin-top: 8px;
         }
@@ -137,137 +134,101 @@
             <p class="last-updated">Last Updated: February 2026</p>
 
             <div class="policy-block">
-                <h3>Introduction</h3>
-                <p>Nobloat AI ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+                <p>NoBloat AI (“we”, “our”, or “us”) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
             </div>
 
             <div class="policy-block">
                 <h3>1. Data Collection</h3>
-                <p>Nobloat AI collects and processes the following information: face photographs that you voluntarily provide by taking a selfie with your device camera or selecting a photo from your photo library, food photographs you capture or select for nutritional analysis, daily water/sodium/potassium intake tracking data, habit and routine completion data, and face scan analysis results including numerical scores.</p>
-                <p style="margin-top: 12px;">No biometric face mapping, Face ID data, ARKit face mesh data, or facial recognition/identification data is collected. The app does not use the TrueDepth camera or any face-tracking frameworks.</p>
-                <p style="margin-top: 12px;">Additional information you may provide includes your name and age (stored locally on your device for personalization) and survey responses during onboarding (stored locally to customize recommendations). We also collect anonymous app usage data to improve the app experience.</p>
+                <p>NoBloat AI collects and processes the following information only when voluntarily provided by the user:</p>
+                <ul>
+                    <li>Face photographs uploaded by the user for the Face Scan feature</li>
+                    <li>Food photographs uploaded by the user for nutritional analysis</li>
+                    <li>Daily water, sodium, and potassium intake data</li>
+                    <li>Habit and routine completion data</li>
+                    <li>Face scan analysis results, including numerical scores</li>
+                </ul>
+                <p>We do not collect biometric identifiers, facial recognition data, facial geometry, Face ID data, ARKit face mesh data, TrueDepth camera data, or any form of identity verification data.</p>
+                <p>Additional optional data includes name and age (stored locally on-device for personalization) and onboarding survey responses (stored locally to customize recommendations). Anonymous app usage analytics may be collected to improve performance and user experience.</p>
             </div>
 
             <div class="policy-block">
-                <h3>2. Face Data — Collection and Use</h3>
-                <p>When you use the Face Scan feature, the app collects a face photograph that you voluntarily provide. The photograph is compressed to JPEG format and temporarily transmitted to OpenAI's GPT-4 Vision API via our secure server proxy for the sole purpose of generating an AI-powered facial aesthetic analysis.</p>
-                <p style="margin-top: 12px;">The AI returns numerical ratings (overall score, jawline definition, cheekbone prominence, skin quality, masculinity, and potential) along with a text-based analysis and personalized lifestyle recommendations (such as hydration, sleep, and sodium reduction tips).</p>
-                <p style="margin-top: 12px;">Your face data is used exclusively to provide this facial analysis feature and to allow you to track your facial debloating progress over time within the app. Face data is never used for facial recognition, identification, authentication, or any purpose other than providing the analysis described above.</p>
+                <h3>2. Face Data — Collection, Consent, and Use</h3>
+                <p>When using the Face Scan feature, the user voluntarily provides a face photograph by taking a selfie or selecting an image from their photo library.</p>
+                <p>Before any face image is transmitted to a third-party AI service, the app displays a clear consent screen explaining how the image will be used and identifying the third-party service. The image is only transmitted after the user provides explicit consent.</p>
+                <p>The image is compressed to JPEG format and transmitted securely for AI-powered facial aesthetic analysis. It is used exclusively to:</p>
+                <ul>
+                    <li>Generate an AI-based facial analysis</li>
+                    <li>Provide numerical ratings (overall score, jawline definition, cheekbone prominence, skin quality, masculinity, and potential)</li>
+                    <li>Display personalized lifestyle recommendations</li>
+                    <li>Allow the user to track facial debloating progress over time</li>
+                </ul>
+                <p>Face data is never used for facial recognition, identification, authentication, advertising, profiling, or model training.</p>
             </div>
 
             <div class="policy-block">
                 <h3>3. Face Data — Third-Party Sharing</h3>
-                <p>Face photographs are transmitted to OpenAI's GPT-4 Vision API via our secure Cloudflare Worker proxy for the sole purpose of generating the facial analysis results displayed in the app. OpenAI processes the image in accordance with their own data usage policies.</p>
-                <p style="margin-top: 12px;">Apart from OpenAI, face data is not shared with, sold to, rented to, or disclosed to any other third party. We do not share face data with advertisers, data brokers, analytics providers, or any other external parties. We do not store your face images on any server — images are transmitted to OpenAI for processing and are not retained on our servers.</p>
+                <p>Face photographs are transmitted solely to OpenAI via their GPT-4 Vision API through a secure server proxy for real-time processing. Face data is not sold, rented, or disclosed to advertisers, data brokers, or analytics providers. Face images are not stored on our servers. OpenAI processes the images according to its own privacy and data-handling policies and does not use submitted data to train AI models.</p>
             </div>
 
             <div class="policy-block">
                 <h3>4. Face Data — Storage and Retention</h3>
-                <p>Face photographs and their associated analysis results are stored locally on your device only, using on-device storage (UserDefaults). A maximum of 5 most recent face scan results are retained on the device at any time; older scans are automatically deleted when new scans are performed.</p>
-                <p style="margin-top: 12px;">Face data is never uploaded to or stored on any cloud server, database, or external storage system controlled by us. Your locally stored face data persists on your device until you uninstall the app, clear the app's data through your device settings, or until it is automatically replaced by newer scan results (beyond the 5-scan limit). Uninstalling the app permanently deletes all locally stored face data.</p>
+                <p>Face photographs and their associated analysis results are stored securely on the user’s device only, using iOS app-protected local storage.</p>
+                <ul>
+                    <li>A maximum of 5 most recent face scans are retained locally</li>
+                    <li>Older scans are automatically deleted when new scans exceed the limit</li>
+                    <li>Face data is never uploaded to or stored in any cloud storage controlled by us</li>
+                    <li>All locally stored face data is permanently deleted when the app is uninstalled or app data is cleared via device settings</li>
+                </ul>
             </div>
 
             <div class="policy-block">
                 <h3>5. Food Data</h3>
-                <p>When you use the Food Scan feature, a photograph of food is transmitted to OpenAI's GPT-4 Vision API via our secure server proxy for nutritional analysis. The same data handling practices that apply to face data apply to food photos: images are not stored on our servers, results are stored locally on your device, and food photos are not shared with any third party other than OpenAI for the purpose of analysis.</p>
+                <p>Food photographs are processed using the same safeguards as face data. They are sent securely to OpenAI for nutritional analysis, not stored on our servers, and stored locally on the user’s device only. Food images are not shared with any third party other than OpenAI for analysis purposes.</p>
             </div>
 
             <div class="policy-block">
                 <h3>6. Data Security</h3>
-                <p>All photos transmitted to OpenAI for processing are sent via encrypted HTTPS connections. Our server proxy uses industry-standard TLS encryption. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security of data during transmission.</p>
+                <p>All data transmitted for AI processing is sent over encrypted HTTPS connections using industry-standard TLS encryption. While we take reasonable measures to protect user data, no method of transmission is completely secure.</p>
             </div>
 
             <div class="policy-block">
                 <h3>7. No Sale of Data</h3>
-                <p>We do not sell, rent, trade, or otherwise disclose your personal information, face data, or photos to any third parties for marketing, advertising, or any commercial purposes. Your face images and food images are only transmitted to OpenAI for the specific and sole purpose of providing the AI analysis features within the app.</p>
+                <p>We do not sell, rent, trade, or otherwise disclose personal data, face images, or food images for marketing, advertising, or commercial purposes.</p>
             </div>
 
             <div class="policy-block">
                 <h3>8. Third-Party Services</h3>
-                <p><strong>OpenAI:</strong> We use OpenAI's API to process face and food images for analysis. Images are sent securely and are processed according to OpenAI's privacy policy. Images are not used to train AI models.</p>
-                <p style="margin-top: 8px;"><strong>Superwall:</strong> We use Superwall to manage our subscription paywall. Superwall may collect anonymous analytics data.</p>
-                <p style="margin-top: 8px;"><strong>Apple Services:</strong> App Store for processing subscriptions and payments; StoreKit for managing in-app purchases.</p>
+                <ul>
+                    <li>OpenAI – Processes face and food images for AI analysis</li>
+                    <li>Superwall – Manages subscription paywalls and may collect anonymous analytics</li>
+                    <li>Apple Services – App Store and StoreKit for payments and subscriptions</li>
+                </ul>
+                <p>All third-party services provide data protection consistent with applicable privacy standards.</p>
             </div>
 
             <div class="policy-block">
                 <h3>9. Your Rights</h3>
                 <ul>
-                    <li><strong>Access:</strong> View your face data and analysis results stored locally on your device at any time within the app.</li>
-                    <li><strong>Delete:</strong> Remove all your face data and personal information by uninstalling the app or clearing app data in your device settings.</li>
-                    <li><strong>Opt-out:</strong> Choose not to use the face scan feature at any time. Face photo collection is entirely voluntary and user-initiated.</li>
-                    <li><strong>Contact:</strong> Request information about how your data is processed by contacting us at nobloatai@gmail.com.</li>
+                    <li>Access all locally stored face data and analysis results in-app</li>
+                    <li>Delete all data by uninstalling the app or clearing app data</li>
+                    <li>Opt out of face scans at any time</li>
+                    <li>Contact us for data inquiries at nobloatai@gmail.com</li>
                 </ul>
             </div>
 
             <div class="policy-block">
-                <h3>10. Children's Privacy</h3>
-                <p>This app is not intended for use by anyone under the age of 18. We do not knowingly collect personal information, including face data, from children. If we learn that we have inadvertently collected data from a user under 18, we will take steps to delete such information.</p>
+                <h3>10. Children’s Privacy</h3>
+                <p>NoBloat AI is not intended for users under the age of 18. We do not knowingly collect personal or face data from children.</p>
             </div>
 
             <div class="policy-block">
                 <h3>11. Changes to This Policy</h3>
-                <p>We may update this Privacy Policy from time to time. Any changes will be posted within the app and on this page. Your continued use of the app after changes constitutes acceptance of the updated policy.</p>
+                <p>We may update this Privacy Policy periodically. Updates will be posted within the app and on this page.</p>
             </div>
 
             <div class="policy-block">
                 <h3>Contact Us</h3>
-                <p>If you have questions about this Privacy Policy, please contact us at: <a href="mailto:nobloatai@gmail.com">nobloatai@gmail.com</a></p>
-            </div>
-        </div>
-
-        <div class="privacy-section" id="face-data-disclosure">
-            <h2>Face Data Disclosure</h2>
-            <p class="last-updated">Frequently Asked Questions About How Nobloat AI Handles Face Data</p>
-
-            <div class="policy-block">
-                <h3>What face data does the app collect?</h3>
-                <p>Nobloat AI collects a single face photograph that the user voluntarily provides, either by taking a selfie with the device's front-facing camera or by selecting an existing photo from their photo library. The photograph is compressed to JPEG format for processing.</p>
-                <p style="margin-top: 12px;">The app does <strong>not</strong> collect any of the following: biometric face mapping data, Face ID data, ARKit face mesh or blend shape data, TrueDepth camera data, facial recognition or identification data, or any other form of biometric facial geometry. The app does not use ARKit, the Vision framework, or any face-tracking frameworks.</p>
-            </div>
-
-            <div class="policy-block">
-                <h3>What are all planned uses of the collected face data?</h3>
-                <p>The collected face photograph is used for one purpose only: it is temporarily transmitted to OpenAI's GPT-4 Vision API via a secure Cloudflare Worker proxy to generate an AI-powered facial aesthetic analysis. The AI returns:</p>
-                <ul>
-                    <li>Numerical ratings: overall score, jawline definition, cheekbone prominence, skin quality, masculinity rating, and potential score</li>
-                    <li>A short text-based analysis (2-3 sentences)</li>
-                    <li>Personalized lifestyle recommendations (e.g., hydration, sleep, sodium reduction tips)</li>
-                </ul>
-                <p style="margin-top: 12px;">These results are displayed to the user and stored locally on the device so the user can track their facial debloating progress over time. Face data is <strong>never</strong> used for facial recognition, identification, authentication, advertising, profiling, or any purpose other than providing the analysis described above.</p>
-            </div>
-
-            <div class="policy-block">
-                <h3>Will the face data be shared with any third parties? Where will this information be stored?</h3>
-                <p><strong>Third-party sharing:</strong> Face photographs are shared with only one third party — OpenAI — via their GPT-4 Vision API, solely for the purpose of generating the facial analysis. OpenAI processes the image in accordance with their own data usage policies. Face data is <strong>not</strong> shared with, sold to, rented to, or disclosed to any other third party, including advertisers, data brokers, or analytics providers.</p>
-                <p style="margin-top: 12px;"><strong>Storage location:</strong> Face photographs and their associated analysis results are stored <strong>locally on the user's device only</strong>, using on-device storage (UserDefaults). We do not store face images on any server, cloud database, or external storage system. Images are transmitted to OpenAI for real-time processing and are not retained on our servers.</p>
-            </div>
-
-            <div class="policy-block">
-                <h3>How long will face data be retained?</h3>
-                <p><strong>On-device retention:</strong> A maximum of 5 most recent face scan results (including the photograph and analysis scores) are retained locally on the user's device. When a new scan is performed and the limit is exceeded, the oldest scan is automatically deleted.</p>
-                <p style="margin-top: 12px;"><strong>Server retention:</strong> Face images are not stored on our servers at any point. Images are transmitted to OpenAI for real-time processing only and are not retained by us after the analysis is returned.</p>
-                <p style="margin-top: 12px;"><strong>Permanent deletion:</strong> All locally stored face data is permanently deleted when the user uninstalls the app or clears the app's data through their device settings.</p>
-            </div>
-
-            <div class="policy-block">
-                <h3>Where in the privacy policy is face data collection, use, disclosure, sharing, and retention explained?</h3>
-                <p>The privacy policy (above and in-app under Settings &gt; Privacy Policy) addresses face data in the following dedicated sections:</p>
-                <ul>
-                    <li><strong>Section 1 — Data Collection:</strong> Identifies what face data is collected and explicitly states what is not collected (no biometric mapping, no ARKit, no Face ID, no TrueDepth camera).</li>
-                    <li><strong>Section 2 — Face Data — Collection and Use:</strong> Explains exactly how face photos are collected, how they are processed, what the AI returns, and confirms the data is used exclusively for the facial analysis feature.</li>
-                    <li><strong>Section 3 — Face Data — Third-Party Sharing:</strong> Discloses that face photos are shared only with OpenAI for processing and with no other third parties.</li>
-                    <li><strong>Section 4 — Face Data — Storage and Retention:</strong> Details that face data is stored locally on-device only, the 5-scan retention limit, automatic deletion of older scans, and permanent deletion upon app uninstall.</li>
-                    <li><strong>Section 7 — No Sale of Data:</strong> Confirms face data is never sold, rented, or traded.</li>
-                    <li><strong>Section 9 — Your Rights:</strong> Explains how users can access, delete, and opt out of face data collection.</li>
-                </ul>
-            </div>
-
-            <div class="policy-block">
-                <h3>Specific text from the privacy policy concerning face data</h3>
-                <p>The following is quoted directly from the privacy policy sections concerning face data:</p>
-                <p style="margin-top: 12px; padding: 15px; background: #eef; border-left: 4px solid #667eea; border-radius: 4px; font-style: italic;">"When you use the Face Scan feature, the app collects a face photograph that you voluntarily provide. The photograph is compressed to JPEG format and temporarily transmitted to OpenAI's GPT-4 Vision API via our secure server proxy for the sole purpose of generating an AI-powered facial aesthetic analysis. The AI returns numerical ratings (overall score, jawline definition, cheekbone prominence, skin quality, masculinity, and potential) along with a text-based analysis and personalized lifestyle recommendations (such as hydration, sleep, and sodium reduction tips). Your face data is used exclusively to provide this facial analysis feature and to allow you to track your facial debloating progress over time within the app. Face data is never used for facial recognition, identification, authentication, or any purpose other than providing the analysis described above." — Section 2</p>
-                <p style="margin-top: 12px; padding: 15px; background: #eef; border-left: 4px solid #667eea; border-radius: 4px; font-style: italic;">"Face photographs are transmitted to OpenAI's GPT-4 Vision API via our secure Cloudflare Worker proxy for the sole purpose of generating the facial analysis results displayed in the app. OpenAI processes the image in accordance with their own data usage policies. Apart from OpenAI, face data is not shared with, sold to, rented to, or disclosed to any other third party. We do not share face data with advertisers, data brokers, analytics providers, or any other external parties. We do not store your face images on any server — images are transmitted to OpenAI for processing and are not retained on our servers." — Section 3</p>
-                <p style="margin-top: 12px; padding: 15px; background: #eef; border-left: 4px solid #667eea; border-radius: 4px; font-style: italic;">"Face photographs and their associated analysis results are stored locally on your device only, using on-device storage (UserDefaults). A maximum of 5 most recent face scan results are retained on the device at any time; older scans are automatically deleted when new scans are performed. Face data is never uploaded to or stored on any cloud server, database, or external storage system controlled by us. Your locally stored face data persists on your device until you uninstall the app, clear the app's data through your device settings, or until it is automatically replaced by newer scan results (beyond the 5-scan limit). Uninstalling the app permanently deletes all locally stored face data." — Section 4</p>
+                <p>If you have questions about this Privacy Policy, contact us at: <a href="mailto:nobloatai@gmail.com">nobloatai@gmail.com</a></p>
             </div>
         </div>
 
